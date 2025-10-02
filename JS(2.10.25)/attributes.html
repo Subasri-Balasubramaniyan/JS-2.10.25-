@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+    <a id="mylink" href="https://www.google.com/?zx=1759396408214&no_sw_cr=1"></a>
+    <script>
+        let link=document.getElementById("mylink")
+        console.log(link.getAttribute("href"))
+        link.setAttribute("href","https://openai.com/sora/")
+        link.textContent="openAI"
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Timers Example</title>
+</head>
+<body>
+  <h2>JavaScript Timers Demo</h2>
+  <p id="status">Waiting...</p>
+  <button id="stopTimeout">Stop Timeout</button>
+  <button id="stopInterval">Stop Interval</button>
+
+  <script>
+    let status = document.getElementById("status");
+
+    // 1️⃣ setTimeout → Run once after 3 seconds
+    let timeoutId = setTimeout(() => {
+      status.innerHTML = "⏰ Timeout executed after 3 seconds!";
+    }, 3000);
+
+    // 2️⃣ clearTimeout → Cancel the above timeout
+    document.getElementById("stopTimeout").addEventListener("click", () => {
+      clearTimeout(timeoutId);
+      status.innerHTML = "❌ Timeout was canceled!";
+    });
+
+    // 3️⃣ setInterval → Run every 1 second
+    let count = 0;
+    let intervalId = setInterval(() => {
+      count++;
+      console.log("Interval count: " + count);
+      status.innerHTML = "🔄 Interval running... Count = " + count;
+    }, 1000);
+
+    // 4️⃣ clearInterval → Stop the interval when button is clicked
+    document.getElementById("stopInterval").addEventListener("click", () => {
+      clearInterval(intervalId);
+      status.innerHTML = "✅ Interval stopped!";
+    });
+  </script>
+</body>
+</html>

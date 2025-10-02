@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+    // window
+    console.log(window.innerWidth)
+    console.log(window.innerHeight)
+    // Alert message
+let btn1=document.getElementById("btn")
+btn1.addEventListener("click",function(){
+    alert("Welcome to my website!!!")
+})
+// confirm()
+let answer=confirm("Do you want to continue??")
+if(answer){
+    console.log("User pressed Ok")
+}
+else{
+    console.log("User pressed Cancel")
+}
+// Prompt
+let name1=prompt("Enter your name")
+alert("Hello",+ name1)
+// Location
+console.log(location.href);     // Full URL
+console.log(location.hostname); // Domain name
+console.log(location.pathname); // Page path
+// Navigator
+console.log(navigator.userAgent); // Browser info
+console.log(navigator.language);  // Browser language
+console.log(navigator.onLine);    // true if online
+// Screen
+console.log(screen.width);   // Screen width
+console.log(screen.height);  // Screen height
+console.log(screen.colorDepth); // Color quality
+
+
+</script>
+</body>
+</html>

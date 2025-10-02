@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList</title>
+</head>
+<body>
+    <p id="text">Hello World</p>
+
+<style>
+  .highlight { color: red; font-weight: bold; }
+</style>
+
+<script>
+  let txt = document.getElementById("text");
+
+  txt.classList.add("highlight");     // add class
+  console.log(txt.classList.contains("highlight")); // true /* Printing statement if the class is added it prints true in console */
+  txt.classList.remove("highlight");  // remove class  /* It removes the class highlight */
+  txt.classList.toggle("highlight");  // toggle on/off /* If classlist added it removes that if classlist is not added it adds */
+</script>
+</body>
+</html>
